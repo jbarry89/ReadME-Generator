@@ -1,1 +1,3 @@
+#Ignore the node Modules files and DS Store (For Mac Users)
 node_modules
+.DS_Store
