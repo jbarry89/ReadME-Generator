@@ -63,15 +63,15 @@ const askContributors = async () => {
   let addMore = true;
 
   while (addMore) {
-    const { contributor } = await inquirer.prompt([
+    const {contributor} = await inquirer.prompt([
       {
         type: "input",
-        name: "contribution",
-        message: "Please enter name of contributor(s) of this project (Use GitHUb user name):",
+        name: "contributor",
+        message: "Please enter name of contributor(s) of this project (Use GitHub user name):",
       }
     ]);
 
-    contributors.push(contributor);
+    contributors.push(contributor.trim()); //Trim any spaces
 
     // Creates a Yes/No Prompt question? If user select "Yes", then confirm = true. If "No", then confirm = false.
     const {confirm} = await inquirer.prompt([ 
@@ -101,17 +101,21 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
-  inquirer
-    .prompt(questions)
-    .then((answers) => {
-      console.log(colors.blue(answers)); // making the user answers to the prompt as color blue
-      const readmeContent = generateMarkdown(answers);
-      writeToFile("README.md", readmeContent);
-    })
-    .catch((error) => {
-      console.error("An Error has occured:", error);
-    });
+async function init() {
+    try{
+       const answers = await inquirer.prompt(questions);
+    //    console.log(colors.blue(answers)); // making the user answers to the prompt as color blue
+       const contributors = await askContributors();  
+       answers.contributors = contributors;
+
+       // Generate the markdown file
+       const readmeContent = generateMarkdown(answers);
+       writeToFile("README.md", readmeContent);
+
+    }catch(error){
+        console.error("An Error has occured:", error);
+    }
+    
 }
 
 // Function call to initialize app

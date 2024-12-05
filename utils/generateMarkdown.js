@@ -44,9 +44,9 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
   ${renderLicenseBadge(data.license)}
-
+  
   ## Table of Contents
-
+  
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
@@ -54,30 +54,30 @@ function generateMarkdown(data) {
   * [Test](#test)
   * ${renderLicenseLink(data.license)}
   * [Questions](#questions)
-
+  
   ## Description
   ${data.description}
 
   ## Installation
   ${data.installation}
 
-  ## Usage
+  ## Usage 
   ${data.usage}
-  
-  ![README Generator Screenshot](./assets/images/readme-generator-screenshot.png)
+
+  ![README Generator Screenshot](./assets/readme-generator-screenshot.png)
   
   ## Contributing
-  ${data.contribution}
-
-  ## Test
+  ${data.contributors.map((contributor) => `* ${contributor.trim()}`).join("\n  ")}
+  
+  ## Test 
   ${data.testInstruction}
 
   ${renderLicenseSection(data.license)}
-
+  
   ## Questions
   Feel Free to contact me for any additional questions
   * GitHub: [${data.gitHub}](https://github.com/${data.gitHub}/)
-  * Email: ${data.email}
+  * Email: ${data.email} 
   `;
 }
 

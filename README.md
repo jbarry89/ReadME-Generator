@@ -1,9 +1,9 @@
 # README Generator
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+  
   ## Table of Contents
-
+  
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
@@ -11,29 +11,30 @@
   * [Test](#test)
   * [License](#license)
   * [Questions](#questions)
-
+  
   ## Description
-  Takes the user inputs from the prompt questions / statements and generate a professional `README.md` file.
+  This takes the user inputs from the prompt questions / statements and generate a professional `README.md` file.
 
   ## Installation
-  JavaScript, Node JS, `inquirer` and `fs` package, and `npm`.
+  Installation Required:  JavaScript, Node JS, `inquirer` and `fs` package, and `npm`.
 
-  ## Usage
-  Generate professional `README` file.
+  ## Usage 
+  Here is an example screenshot of the README Generator:
 
   ![README Generator Screenshot](./assets/readme-generator-screenshot.png)
-
+  
   ## Contributing
-  someName123
-
-  ## Test
+  * someName123
+  * someName456
+  
+  ## Test 
   N/A
 
   ## License
   This project is Licensed under the MIT License.
-
+  
   ## Questions
   Feel Free to contact me for any additional questions
   * GitHub: [jbarry89](https://github.com/jbarry89/)
-  * Email: myEmail@gmail.com
+  * Email: myEmail@gmail.com 
   
