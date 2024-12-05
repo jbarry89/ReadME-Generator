@@ -21,6 +21,8 @@
   ## Usage 
   Here is an example screenshot of the README Generator:
 
+  [README Generator Video Link](https://drive.google.com/file/d/1gfW2P8Ag1g1j2vHKm6AXR77Z7s4HAWeX/view)
+
   ![README Generator Screenshot](./assets/readme-generator-screenshot.png)
   
   ## Contributing
