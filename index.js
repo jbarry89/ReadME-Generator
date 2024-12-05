@@ -1,8 +1,6 @@
 // TODO: Include packages needed for this application
 import fs from "node:fs";
 import inquirer from "inquirer";
-import colors from "colors";
-// import { error } from "node:console";
 
 import generateMarkdown from "./utils/generateMarkdown.js";
 
